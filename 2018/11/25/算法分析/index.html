@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sun Nov 25 2018 18:11:01 GMT+0800">
-        <meta property="article:modified_time" content="Sun Nov 25 2018 18:16:55 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 25 2018 18:33:28 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/11/25/算法分析/index.html",
     "headline": "算法分析",
     "datePublished": "Sun Nov 25 2018 18:11:01 GMT+0800",
-    "dateModified": "Sun Nov 25 2018 18:16:55 GMT+0800",
+    "dateModified": "Sun Nov 25 2018 18:33:28 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "doublec",
@@ -523,7 +523,7 @@
 <blockquote>
 <p>问题 ：给定n个整数，将它们按（非降）序排序  观察： 有序/无序 系列中，任意/总有一对相邻元素排序/逆序<br>扫描交换：依次比较每一对相邻元素，如有必要，交换之，若整趟扫描都没有进行交换，则排序完成；否则，在做一趟交换。</p>
 </blockquote>
-<p>#include &lt;stdio.h&gt;</p>
+<p>` #include &lt;stdio.h&gt;</p>
 <p>void bubble_sort(long [], long);</p>
 <p>int main()<br>{<br>  long array[100], n, c, d, swap;</p>
 <p>  printf(“Enter number of elements\n”);<br>  scanf(“%ld”, &amp;n);</p>
@@ -534,13 +534,14 @@
 <p>  for (c = 0; c &lt; n; c++)<br>     printf(“%ld\n”, array[c]);</p>
 <p>  return 0;<br>}</p>
 <p>void bubble_sort(long list[], long n)<br>{<br>  long c, d, t;</p>
-<p>  for (c = 0 ; c &lt; n - 1; c++)<br>  {<br>    for (d = 0 ; d &lt; n - c - 1; d++)<br>    {<br>      if (list[d] &gt; list[d+1])<br>      {<br>        /<em> Swapping </em>/</p>
+<p>  for (c = 0 ; c &lt; n - 1; c++)<br>  {<br>    for (d = 0 ; d &lt; n - c - 1; d++)<br>    {<br>      if (list[d] &gt; list[d+1])<br>      {<br>        //Swapping</p>
 <pre><code>    t         = list[d];
     list[d]   = list[d+1];
     list[d+1] = t;
   }
 }
 </code></pre><p>  }<br>}</p>
+<p>`</p>
 <p><strong>其中的分析</strong></p>
 <ul>
 <li>有穷性： 起泡排序必然会终止？至多迭代多少趟？</li>
